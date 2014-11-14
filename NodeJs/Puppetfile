@@ -1,0 +1,7 @@
+mod "will/nodejs",
+	:git => "https://github.com/willdurand/puppet-nodejs"
+
+
+
+
+

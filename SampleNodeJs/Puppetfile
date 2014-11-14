@@ -1,0 +1,2 @@
+mod "lawrence/nodesample",
+	:git => "https://github.com/lawrencetaylor/puppet-nodesample"
