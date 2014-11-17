@@ -1,5 +1,6 @@
-mod "thomasvandoren/redis",
-	:git => "https://github.com/thomasvandoren/puppet-redis"
+forge "https://forgeapi.puppetlabs.com"
+
+mod "thomasvandoren/redis"
 
 
 
