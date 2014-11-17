@@ -1,0 +1,7 @@
+mod "thomasvandoren/redis",
+	:git => "https://github.com/thomasvandoren/puppet-redis"
+
+
+
+
+
