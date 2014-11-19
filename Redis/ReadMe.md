@@ -8,5 +8,5 @@ This will create a Dockerfile in the /Redis directory.  Now we need to build the
 
 Once built you can run a redis instance by running:
 
-	docker run -d -p 6379:6379 lawrencetaylor/docker_redis /opt/redis/bin/redis-server
+	sudo docker run -d -p 6379:6379 lawrencetaylor/docker_redis /opt/redis/bin/redis-server
 
