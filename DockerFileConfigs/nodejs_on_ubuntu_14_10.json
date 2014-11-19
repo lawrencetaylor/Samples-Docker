@@ -1,0 +1,9 @@
+{
+    "BaseImage" : "ubuntu",
+    "PostPuppetCommands" : 
+	[
+		"export PATH=$PATH:/usr/local/node/node-default/bin",
+		"echo 'export PATH=$PATH:/usr/local/node/node-default/bin' >> ~/.bashrc",
+		"ln -s /usr/local/node/node-default/bin/node /usr/bin/node" 
+	]
+}
