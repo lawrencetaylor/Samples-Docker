@@ -1,0 +1,7 @@
+{
+    "BaseImage" : "ubuntu",
+    "PrePuppetCommands" : 
+	[
+		"sudo apt-get -y install libaugeas-ruby" 
+	]
+}
