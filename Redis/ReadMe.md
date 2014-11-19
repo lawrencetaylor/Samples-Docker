@@ -4,8 +4,7 @@ We are going to use the configuration under DockerFileConfigs/redis_on_ubuntu_14
 
 This will create a Dockerfile in the /Redis directory.  Now we need to build the docker image
 
-	cd Redis
-	docker build -t lawrencetaylor/docker_redis .
+	sudo docker build -t lawrencetaylor/docker_redis /Redis
 
 Once built you can run a redis instance by running:
 

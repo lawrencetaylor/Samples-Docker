@@ -5,12 +5,13 @@ RUN apt-get -y update
 RUN apt-get -y install rubygems-integration
 RUN apt-get -y install ruby-dev
 RUN echo "gem: --no-ri --no-rdoc" > ~/.gemrc
+RUN apt-get -y install build-essential
 
 RUN gem install puppet librarian-puppet
 
 RUN apt-get -y -q install wget git-core
 
-ADD PuppetFile /
+ADD Puppetfile /
 ADD init.pp /
 
 
@@ -20,4 +21,5 @@ RUN librarian-puppet install
 
 #Run puppet apply
 RUN puppet apply --modulepath=/modules ./init.pp
+
 
