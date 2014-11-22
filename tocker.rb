@@ -20,6 +20,10 @@ class OptionsParser
 				options.targetDirectory = t
 			end
 
+			opts.on("-dt", "--docker-template DOCKER_TEMPLATE", "Docker Target") do |t|
+				options.dockerTemplate = dt
+			end
+
 		end
 
 		opt_parser.parse!(args)
@@ -41,6 +45,11 @@ class OptionsParser
 			isValid = false
 		end
 
+		if(options.dockerTemplate.nil?)
+			puts "Unspecified docker file template"
+			isValid = false
+		end
+
 		isValid
 
 	end
@@ -56,7 +65,7 @@ else
 	configMap = JSON.parse(configJson)
 	config = Hashie::Mash.new configMap
 
-	template = File.open('Templates/dockerfile.erb').read
+	template = File.open(options.dockerTemplate).read
 	renderer = ERB.new(template)
 
 	dockerFilePath = File.join(options.targetDirectory, "Dockerfile")
