@@ -20,7 +20,7 @@ class OptionsParser
 				options.targetDirectory = t
 			end
 
-			opts.on("-dt", "--docker-template DOCKER_TEMPLATE", "Docker Target") do |t|
+			opts.on("-dt", "--docker-template DOCKER_TEMPLATE", "Docker Target") do |dt|
 				options.dockerTemplate = dt
 			end
 
