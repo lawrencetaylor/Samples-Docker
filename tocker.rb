@@ -20,8 +20,8 @@ class OptionsParser
 				options.targetDirectory = t
 			end
 
-			opts.on("-dt", "--docker-template DOCKER_TEMPLATE", "Docker Target") do |dt|
-				options.dockerTemplate = dt
+			opts.on("-d", "--docker-template DOCKER_TEMPLATE", "Docker Target") do |d|
+				options.dockerTemplate = d
 			end
 
 		end
@@ -61,6 +61,11 @@ isValid = OptionsParser.validate(options)
 unless isValid
 	puts "Invalid arguments.  Use --help to view options"
 else
+
+	puts "Config File: #{options.configFile}"
+	puts "Docker Template: #{options.dockerTemplate}"
+	puts "Target Directory: #{options.targetDirectory}"
+
 	configJson = File.open(options.configFile).read
 	configMap = JSON.parse(configJson)
 	config = Hashie::Mash.new configMap
